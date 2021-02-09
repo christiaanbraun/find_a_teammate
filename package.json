@@ -16,5 +16,5 @@
   "contributors": [
     "Christiaan Braun <chrisbraun50@gmail.com>"
   ],
-  "dependencies": {}
+  "scripts": { "say-hello": "echo 'Hello World' "}
 }
