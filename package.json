@@ -1,0 +1,12 @@
+{
+    "name": "like_match_chat",
+    "version": "1.0.0",
+    "description": "Allowes users to like eachother and chat matched users",
+    "license": "MIT",
+    "keywords": [
+        "like",
+        "match",
+        "chat",
+    ],
+    "repository": "https://github.com/christiaanbraun/matching_application_bloktech"
+}
