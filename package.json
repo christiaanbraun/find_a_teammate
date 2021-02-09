@@ -1,12 +1,20 @@
 {
-    "name": "like_match_chat",
+    "name": "find_a_teammate",
     "version": "1.0.0",
-    "description": "Allowes users to like eachother and chat matched users",
+    "description": "Find a teammate for Call of Duty Gunfight mode",
     "license": "MIT",
     "keywords": [
-        "like",
-        "match",
-        "chat",
+      "Teammate",
+      "Match",
+      "Call of Duty",
+      "Gunfight",
+      "Gaming"
     ],
-    "repository": "https://github.com/christiaanbraun/matching_application_bloktech"
+    "repository": "christiaanbraun/find_a_teammate",
+    "bugs": "https://github.com/christiaanbraun/find_a_teammate/issues",
+    "author": "Christiaan Braun <chrisbraun50@gmail.com>",
+    "contributors": [
+      "Christiaan Braun <chrisbraun50@gmail.com>"]
+
 }
+    
