@@ -16,5 +16,10 @@
   "contributors": [
     "Christiaan Braun <chrisbraun50@gmail.com>"
   ],
-  "scripts": { "say-hello": "echo 'Hello World' "}
+  "scripts": {
+    "say-hello": "echo 'Hello World' "
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
