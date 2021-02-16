@@ -4,21 +4,22 @@ const port = 5000
 
 // Set EJS as templating engine
 app.set('view engine', 'ejs')
+// Set views as views dir
 
-// Set homepage
-app.get('/', function(req, res){
-    res.send('kaas')
+// Get homepage
+app.get('/', (req, res) => {
+   res.render('home')
 })
 
 // Set about page
-app.get('/about', function(req, res){
-    res.send('about')
-})
+app.get('/profile', (req, res) => {
+    res.render('my_profile')
+ })
 
 // Set login page
-app.get('/login', function(req, res){
-    res.send('login')
-})
+app.get('/settings', (req, res) => {
+    res.render('settings')
+ })
 
 // Set 404 page
 app.use(function(req, res){
