@@ -7,12 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <form id="Submit Name" method="POST" action="/settings">
-        <h1>Profiel Aanpassen</h1>
-        <input type="text" name="name"/>
-        <input type="submit" value="submit"/>
+    
+    <h1>Username updated!</h1>
+    <p>Your new username is <%= data.name %> </p>
+
+    <form method="POST">
+        <input type="submit" value="Change username"/>
     </form>
 
     <%- include ('../partials/navbar.ejs') %>
+   
 </body>
 </html>
