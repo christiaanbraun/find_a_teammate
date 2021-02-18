@@ -1,10 +1,12 @@
 const express = require('express')
-const app = express()
-
 const bodyParser = require('body-parser')
+
+const app = express()
 
 const port = 5000
 
+// Set the parser for later use
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 // Set EJS as templating engine
 app.set('view engine', 'ejs')
@@ -14,12 +16,7 @@ app.use(express.static('public'))
 
 // Get homepage
 app.get('/', (req, res) => {
-   res.render('pages/home', {
-    username: 'ChrisBreezy',
-    age: '21',
-    favoritePrimary: 'AN-94',
-    favoriteSecondary: 'Combat Knife'
-})
+   res.render('pages/home')
 })
 
 // Get about page
@@ -30,6 +27,12 @@ app.get('/profile', (req, res) => {
 // Get login page
 app.get('/settings', (req, res) => {
     res.render('pages/settings')
+ })
+ 
+ // Handle post request on settings page and log data to console
+ app.post('/settings', urlencodedParser, (req, res) => {
+    console.log(req.body)
+    res.render('pages/settings-succes')
  })
 
 // Get 404 page
