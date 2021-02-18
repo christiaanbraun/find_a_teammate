@@ -1,6 +1,10 @@
 const express = require('express')
 const app = express()
+
+const bodyParser = require('body-parser')
+
 const port = 5000
+
 
 // Set EJS as templating engine
 app.set('view engine', 'ejs')
