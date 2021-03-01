@@ -1,4 +1,4 @@
-# Find a tammate 
+# Find a teammate 
 
 Hallo, welkom bij mijn repo. Hier vind je mijn voortgang voor een matching feature. Het zal zich richten op Call of Duty spelers.
 
