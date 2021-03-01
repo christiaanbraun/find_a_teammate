@@ -1,18 +1,19 @@
-const express = require('express')
-const controller = require('./controller/controller.js')
-const app = express()
+atuconst express = require('express');
+const controller = require('./controller/controller.js');
 
-const port = 5000
+const app = express();
+
+const port = 5000;
 
 // Set EJS as templating engine
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs');
 
 // Static files are in public folder
-app.use(express.static('public'))
+app.use(express.static('public'));
 
 controller(app);
 
 // Set port and verify the server is working
-app.listen(port, function(){
-    console.log(`Server is up and running on localhost:${port}`)
-})
+app.listen(port, function () {
+  console.log(`Server is up and running on localhost:${port}` );
+});
