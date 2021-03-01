@@ -1,5 +1,6 @@
+const bodyParser = require('body-parser');
+
 module.exports = function (app) {
-  const bodyParser = require('body-parser');
   const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
   // Get homepage
