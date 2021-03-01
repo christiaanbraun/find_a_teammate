@@ -1,4 +1,4 @@
-atuconst express = require('express');
+const express = require('express');
 const controller = require('./controller/controller.js');
 
 const app = express();
@@ -15,5 +15,5 @@ controller(app);
 
 // Set port and verify the server is working
 app.listen(port, function () {
-  console.log(`Server is up and running on localhost:${port}` );
+  console.log(`Server is up and running on localhost:${port}`);
 });
