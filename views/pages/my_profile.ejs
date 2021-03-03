@@ -8,6 +8,11 @@
     <title>Document</title>
   </head>
   <body>
-    <%- include ('../partials/navbar.ejs') %>
+    <header><%- include ('../partials/navbar.ejs') %></header>
+
+    <section>
+      <a href="/settings">Edit Profile</a>
+      <%- include ('../partials/stats.ejs') %>
+    </section>
   </body>
 </html>
