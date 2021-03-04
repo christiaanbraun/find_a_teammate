@@ -1,34 +1,23 @@
 const bodyParser = require('body-parser');
+const User = require('../models/user');
 
 module.exports = function (app) {
   const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-  // Get homepage
+  // Basic routing
   app.get('/', (req, res) => {
     res.render('pages/home');
   });
 
-  // Get profile page
   app.get('/profile', (req, res) => {
     res.render('pages/my_profile');
   });
 
-  // Get settings page
   app.get('/settings', (req, res) => {
     res.render('pages/settings');
   });
 
-  // Handle post request on settings page
-  app.post('/settings', urlencodedParser, (req, res) => {
-    console.log(req.body);
-    res.render('pages/settings-succes', { data: req.body });
-  });
-
-  // Handle edit request on settings page
-  app.post('/settings-succes', urlencodedParser, (req, res) => {
-    console.log(req.body);
-    res.render('pages/settings', { data: req.body });
-  });
+  // Spicy Routing
 
   // Get 404 page
   app.use(function (req, res) {
