@@ -24,5 +24,4 @@ Installeer alle benodigde packages met deze command
  Als het goed is draait de server nu op localhost:5000
  
  ## Vragen en opmerkingen
- Als je vragen en of opmerkingen hebt ben ik te bereiken op:
- chrisbaun50@gmail.com
+ Als je vragen en of opmerkingen kan je een issue aanmaken
