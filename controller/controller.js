@@ -6,7 +6,7 @@ module.exports = function (app) {
 
   // Basic routing
   app.get('/', (req, res) => {
-    res.render('pages/home');
+    res.redirect('/displayuser');
   });
 
   app.get('/profile', (req, res) => {
@@ -18,9 +18,14 @@ module.exports = function (app) {
   });
 
   // Spicy Routing
+  app.get('/displayuser', (req, res) => {
+    User.find().then((result) => {
+      res.render('pages/home', { title: 'Home', user: result });
+    });
+  });
 
   // Get 404 page
-  app.use(function (req, res) {
+  app.use((req, res) => {
     res.status(404).send('404 not found');
   });
 };

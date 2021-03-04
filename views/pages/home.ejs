@@ -4,14 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/style/styles.css" rel="stylesheet" />
-    <title>Find a Teammate :)</title>
+    <title><%= title %></title>
   </head>
 
   <body>
-    <header><%- include ('../partials/navbar.ejs') %></header>
+    <%- include ('../partials/navbar.ejs') %>
 
-    <%- include ('../partials/stats.ejs') %>
+    <main>
+      <section class="loadout">
+        <div class="primary">
+          <h2><%= user.primary %></h2>
+          <!-- <img src="/images/m4.jpg" /> -->
+        </div>
+        <div class="secondary">
+          <h2><%= user.secondary %></h2>
+          <img />
+        </div>
+        <div class="operator">
+          <h2><%= user.operator %></h2>
+          <img />
+        </div>
+        <div class="perk1">
+          <h2><%= user.perk1 %></h2>
+          <img />
+        </div>
+        <div class="perk2">
+          <h2><%= user.perk2 %></h2>
+          <img />
+        </div>
+        <div class="perk3">
+          <h2><%= user.perk3 %></h2>
+          <img />
+        </div>
+      </section>
 
-    <script></script>
+      <section class="profiles">
+        <h2>Username: <%= user.username %></h2>
+        <h3>Platform <%= user.platform %></h3>
+        <h3>Age <%= user.age %></h3>
+      </section>
+    </main>
   </body>
 </html>

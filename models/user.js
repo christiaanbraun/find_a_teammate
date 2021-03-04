@@ -13,7 +13,7 @@ const userSchema = new Schema({
   },
   age: {
     type: String,
-    required: false,
+    required: true,
   },
   primary: {
     type: String,

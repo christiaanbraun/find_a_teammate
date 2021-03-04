@@ -17,6 +17,8 @@
     "Christiaan Braun <chrisbraun50@gmail.com>"
   ],
   "scripts": {
+    "start": "node server.js",
+    "dev-start": "nodemon server.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
@@ -27,7 +29,6 @@
     "express": "^4.17.1",
     "mongodb": "^3.6.4",
     "mongoose": "^5.11.18"
-    
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
