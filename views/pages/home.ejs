@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/style/styles.css" rel="stylesheet" />
-    <title><%= title %></title>
-  </head>
-
+  <%- include ('../partials/head.ejs') %>
   <body>
     <%- include ('../partials/navbar.ejs') %>
 
     <main>
       <section class="loadout">
+        <% if (user.length > 0) { %> <% user.forEach(user => { %>
         <div class="primary">
           <h2><%= user.primary %></h2>
           <!-- <img src="/images/m4.jpg" /> -->
@@ -40,9 +35,13 @@
 
       <section class="profiles">
         <h2>Username: <%= user.username %></h2>
-        <h3>Platform <%= user.platform %></h3>
-        <h3>Age <%= user.age %></h3>
+        <h3>Platform: <%= user.platform %></h3>
+        <h3>Age: <%= user.age %></h3>
       </section>
+
+      <% }) %> <% } else { %>
+      <p>Error, fix it n00b</p>
+      <% } %>
     </main>
   </body>
 </html>
