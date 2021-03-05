@@ -4,25 +4,31 @@ const User = require('../models/user');
 module.exports = function (app) {
   // Basic routing
   app.get('/', (req, res) => {
-    res.redirect('/displayuser');
-  });
-
-  app.get('/profile', (req, res) => {
-    res.render('pages/my_profile', { title: 'Profile' });
-  });
-
-  app.get('/settings', (req, res) => {
-    res.render('pages/settings', { title: 'Settings' });
-  });
-
-  // Spicy Routing
-  app.get('/displayuser', (req, res) => {
-    User.find().then((result) => {
+    User.findOne({ username: 'Donni Brouwer' }).then((result) => {
       res.render('pages/home', { title: 'Home', user: result });
     });
   });
 
-  app.post('/settings', (req, res) => {
+  app.get('/profile', (req, res) => {
+    User.findOne({ username: 'Wutru' }).then((result) => {
+      res.render('pages/my_profile', { title: 'Profile', user: result });
+    });
+  });
+
+  app.get('/editprofile', (req, res) => {
+    User.findOne({ username: 'Wutru' }).then((result) => {
+      res.render('pages/editprofile', { title: 'Edit Profile', user: result });
+    });
+  });
+
+  app.post('editprofile', (req, res) => {});
+
+  app.get('/adduser', (req, res) => {
+    res.render('pages/adduser', { title: 'Add a User' });
+  });
+
+  // Post data to the database
+  app.post('/adduser', (req, res) => {
     const user = new User(req.body);
 
     user

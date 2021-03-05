@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('../partials/head.ejs') %>
+
+  <body>
+    <%- include ('../partials/navbar.ejs') %>
+    <main>
+      <section>
+        <a href="/editprofile">Edit Profile</a>
+        <a href="/adduser">Add a User</a>
+      </section>
+      <section class="loadout">
+        <form action="/editprofile" method="POST">
+        <div class="primary">
+          <input
+            type="text"
+            placeholder="Primary"
+            name="primary"
+            required
+            value="<%= user.primary %>"
+          />
+        </div>
+        <div class="secondary">
+          <input
+            type="text"
+            placeholder="Secondary"
+            name="secondary"
+            required
+            value="<%= user.secondary %>"
+          />
+        </div>
+        <div class="operator">
+          <input
+            type="text"
+            placeholder="Operator"
+            name="operator"
+            required
+            value="<%= user.operator %>"
+          />
+        </div>
+        <div class="perk1">
+          <input
+            type="text"
+            placeholder="Perk 1"
+            name="perk1"
+            required
+            value="<%= user.perk1 %>"
+          />
+        </div>
+        <input
+            type="text"
+            placeholder="Perk 2"
+            name="perk2"
+            required
+            value="<%= user.perk2 %>"
+          />
+        </div>
+        <div class="perk3">
+          <input
+            type="text"
+            placeholder="Perk 3"
+            name="perk3"
+            required
+            value="<%= user.perk3 %>"
+          />
+        </div>
+      </section>
+
+      <section class="profiles">
+        <input
+            type="text"
+            placeholder="Username"
+            name="username"
+            required
+            value="<%= user.username %>"
+          />
+          <input
+          type="text"
+          placeholder="Platform"
+          name="platform"
+          required
+          value="<%= user.platform %>"
+        />
+        <input
+            type="text"
+            placeholder="Age"
+            name="age"
+            required
+            value="<%= user.age %>"
+          />
+          <button type="submit">Update Changes</button>
+        </form>
+      </section>
+   
+    </main>
+  </body>
+</html>

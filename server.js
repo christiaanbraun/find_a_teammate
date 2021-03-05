@@ -12,6 +12,7 @@ app.set('view engine', 'ejs');
 
 // Static files are in public folder
 app.use(express.static('public'));
+// Use parser
 app.use(express.urlencoded({ extended: true }));
 
 controller(app);

@@ -6,7 +6,6 @@
 
     <main>
       <section class="loadout">
-        <% if (user.length > 0) { %> <% user.forEach(user => { %>
         <div class="primary">
           <h2><%= user.primary %></h2>
           <!-- <img src="/images/m4.jpg" /> -->
@@ -38,10 +37,6 @@
         <h3>Platform: <%= user.platform %></h3>
         <h3>Age: <%= user.age %></h3>
       </section>
-
-      <% }) %> <% } else { %>
-      <p>Error, fix it n00b</p>
-      <% } %>
     </main>
   </body>
 </html>
