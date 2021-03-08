@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Your Profile</h1>
-
+  <%- include ('../partials/head.ejs') %>
+  <body>
     <%- include ('../partials/navbar.ejs') %>
-</body>
+    <main>
+      <section>
+        <a href="/editprofile">Edit Profile</a>
+        <a href="/adduser">Add a User</a>
+      </section>
+      <section class="loadout">
+        <div class="primary">
+          <h2><%= user.primary %></h2>
+          <!-- <img src="/images/m4.jpg" /> -->
+        </div>
+        <div class="secondary">
+          <h2><%= user.secondary %></h2>
+          <img />
+        </div>
+        <div class="operator">
+          <h2><%= user.operator %></h2>
+          <img />
+        </div>
+        <div class="perk1">
+          <h2><%= user.perk1 %></h2>
+          <img />
+        </div>
+        <div class="perk2">
+          <h2><%= user.perk2 %></h2>
+          <img />
+        </div>
+        <div class="perk3">
+          <h2><%= user.perk3 %></h2>
+          <img />
+        </div>
+      </section>
+
+      <section class="profiles">
+        <h2>Username: <%= user.username %></h2>
+        <h3>Platform: <%= user.platform %></h3>
+        <h3>Age: <%= user.age %></h3>
+      </section>
+    </main>
+  </body>
 </html>
