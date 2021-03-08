@@ -1,17 +1,19 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
+
+// Import Datamodel
 const User = require('./models/user');
 
 const app = express();
+const port = 5000;
+
 // Connect to MongoDB
 const dbURI = `mongodb+srv://test_user1:${process.env.DB_PASS}@buster.boqc9.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 mongoose
   .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((result) => console.log('DB connection succesful'))
   .catch((err) => console.log(err));
-
-const port = 5000;
 
 // Set EJS as templating engine
 app.set('view engine', 'ejs');
