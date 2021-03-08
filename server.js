@@ -1,9 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
-
-// Import Datamodel
-const User = require('./models/user');
+const controller = require('./controllers/controller');
 
 const app = express();
 const port = 5000;
@@ -15,62 +13,25 @@ mongoose
   .then((result) => console.log('DB connection succesful'))
   .catch((err) => console.log(err));
 
+// Import Routes
+const routes = require('./routes/routes.js');
+
 // Set EJS as templating engine
 app.set('view engine', 'ejs');
 
 // Static files are in public folder
 app.use(express.static('public'));
+
+// Middleware
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-  User.findOne({ username: 'Donni Brouwer' }).then((result) => {
-    res.render('pages/home', { title: 'Home', user: result });
-  });
-});
+// Get homepage
+app.get('/', controller.homeGet);
 
-app.get('/adduser', (req, res) => {
-  res.render('pages/adduser', { title: 'Add a User' });
-});
+app.use(routes);
 
-app.get('/allusers', (req, res) => {
-  User.find().then((result) => {
-    res.render('pages/allusers', { title: 'All Users', user: result });
-  });
-});
-
-app.post('/adduser', (req, res) => {
-  const user = new User(req.body);
-
-  user
-    .save()
-    .then((result) => {
-      res.redirect('/profile');
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-
-app.get('/profile', (req, res) => {
-  User.findById('604215c2596e6d66e2c19f82').then((result) => {
-    res.render('pages/my_profile', { title: 'Profile', user: result });
-  });
-});
-
-app.get('/editprofile', (req, res) => {
-  User.findOne({ username: 'Wutru' }).then((result) => {
-    res.render('pages/editprofile', { title: 'Edit Profile', user: result });
-  });
-});
-
-app.post('/editprofile', (req, res) => {
-  const updateUser = '604215c2596e6d66e2c19f82';
-
-  User.findByIdAndUpdate(updateUser, req.body).then(() => {
-    User.findOne({ updateUser }).then((result) => {
-      res.redirect('/profile');
-    });
-  });
+app.use((req, res, next) => {
+  res.status(404).send('This page does not exist!');
 });
 
 // Set port and verify the server is working
