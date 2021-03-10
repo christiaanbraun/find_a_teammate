@@ -1,8 +1,16 @@
 # Find a teammate
 
-Hallo, welkom bij mijn repo. Hier vind je mijn voortgang voor een matching feature. Het zal zich richten op Call of Duty spelers.
+Hello and welcome to my repo, in this repo you'll find my progress for the matching feature I'm creating for a school project. The feature will be part of a bigger application which is going to be made in a few weeks. My feature will focus on Call of Duty players and help them find new teammates they like. It will allow people to update their profile and add more profiles. I want to add a login function later on but for now I'm focussing on getting the first part done.
 
-## Hoe clone je de repo
+## My Job Story
+
+When I've got a new favorite weapon, I want to be able to update my profile, so my profile will remain up to date.
+
+## Requirements
+
+To work on this project you'll need [npm and nodejs.](https://www.npmjs.com/get-npm) 
+
+## How to clone this repo
 
 Begin met het clonen van de repo, run deze command in je terminal
 `git clone https://github.com/christiaanbraun/find_a_teammate.git`
