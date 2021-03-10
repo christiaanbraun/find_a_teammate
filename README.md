@@ -12,27 +12,81 @@ To work on this project you'll need [npm and nodejs.](https://www.npmjs.com/get-
 
 ## How to clone this repo
 
-Begin met het clonen van de repo, run deze command in je terminal
+Start by cloning this repo locally, open the terminal and run:
 `git clone https://github.com/christiaanbraun/find_a_teammate.git`
 
-Daarna kun naar de folder navigeren
+After that you can use the terminal to navigate to the folder you just created. (You can also just use the GUI of your OS of course) 
 `cd find_a_teammate`
 
-## Installeren van de packages
+## Installing needed packages
 
-Installeer alle benodigde packages met deze command
+Open the folder and run this command in the terminal:
 
 `npm install`
 
-## Starten van de server
+## Setting up a database
 
-Start de server op door
+This project requires a database connection. MongoDB provides a [guide](https://docs.mongodb.com/guides/server/drivers/) on how to create one.
 
-`node server.js`
+After that you can link it to your local version of the app. Never upload your database username and password to Github!. Instead create a file called .env in your root directory and add the following: 
+```
+DB_USER=your_username
+DB_PASS=your_password
+DB_NAME=your_dbname
+```
 
-Als het goed is draait de server nu op localhost:5000
+## Staring the server
 
-## Vragen en opmerkingen
+Start the server using the following command
 
-Als je vragen en of opmerkingen kan je een issue sturen
+`npm run dev-start`
+
+Server should be running on http://localhost:5000/
+
+## Datamodel
+
+The data in the database is structured to the following model:
+``` JS
+username: {
+    type: String,
+    required: true,
+  },
+  platform: {
+    type: String,
+    required: true,
+  },
+  age: {
+    type: String,
+    required: true,
+  },
+  primary: {
+    type: String,
+    required: true,
+  },
+  secondary: {
+    type: String,
+    required: true,
+  },
+  perk1: {
+    type: String,
+    required: true,
+  },
+  perk2: {
+    type: String,
+    required: true,
+  },
+  perk3: {
+    type: String,
+    required: true,
+  },
+  operator: {
+    type: String,
+    required: true,
+    }
+```
+NB: This might be updated later.
+
+## Questions or comments
+
+If you've got any questions and or comments just shoot in an issue!
 
