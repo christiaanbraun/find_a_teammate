@@ -4,7 +4,7 @@ const dotenv = require('dotenv').config();
 const controller = require('./controllers/controller');
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // Connect to MongoDB
 const dbURI = `mongodb+srv://test_user1:${process.env.DB_PASS}@buster.boqc9.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
