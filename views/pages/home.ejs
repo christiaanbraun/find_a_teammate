@@ -2,20 +2,30 @@
 <html lang="en">
   <%- include ('../partials/head.ejs') %>
   <body>
-    <%- include ('../partials/navbar.ejs') %>
+    <header>
+      <h1>Find-a-Teammate</h1>
+      <nav>
+        <ul>
+          <li class="active"><a href="/">Find Teammates</a></li>
+          <li><a href="/profile">Profile</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <main>
       <section class="loadout">
         <div class="primary">
           <h2><%= user.primary %></h2>
-          <!-- <img src="/images/m4.jpg" /> -->
+          <img src="/images/weapons/primary/<%= user.primary%>.png" />
         </div>
         <div class="secondary">
           <h2><%= user.secondary %></h2>
+          <img src="/images/weapons/secondary/<%= user.secondary%>.png" />
           <img />
         </div>
         <div class="operator">
           <h2><%= user.operator %></h2>
+          <img src="/images/operators/<%= user.operator%>.png" />
           <img />
         </div>
         <div class="perk1">
@@ -37,6 +47,7 @@
         <h3>Platform: <%= user.platform %></h3>
         <h3>Age: <%= user.age %></h3>
       </section>
+      <script src="script/scripts.js"></script>
     </main>
   </body>
 </html>
