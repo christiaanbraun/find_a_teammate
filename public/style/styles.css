@@ -41,7 +41,7 @@ header h1 {
 
 header h1::before {
   background-color: #85b8be;
-  content: "";
+  content: '';
   width: 10px;
   height: 1px;
   position: absolute;

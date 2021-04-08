@@ -2,38 +2,66 @@
 <html lang="en">
   <%- include ('../partials/head.ejs') %>
   <body>
-    <%- include ('../partials/navbar.ejs') %>
+    <header>
+      <h1>Find-a-Teammate</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Find Teammates</a></li>
+          <li class="active"><a href="/profile">Profile</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <form action="/adduser" method="POST">
-      <h1>Add User</h1>
-      <label for="username">Username</label>
-      <input type="text" id="username" name="username" />
+    <main>
+      <form action="/adduser" method="POST">
+        <h1>Add User</h1>
 
-      <label for="platform">Platform:</label>
-      <input type="text" id="platform" name="platform" />
+        <section>
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" />
+        </section>
 
-      <label for="age">Age:</label>
-      <input type="text" id="age" name="age" />
+        <section>
+          <label for="platform">Platform:</label>
+          <input type="text" id="platform" name="platform" />
+        </section>
 
-      <label for="primary">Primary:</label>
-      <input type="text" id="primary" name="primary" />
+        <section>
+          <label for="age">Age:</label>
+          <input type="text" id="age" name="age" />
+        </section>
 
-      <label for="secondary">Secondary:</label>
-      <input type="text" id="secondary" name="secondary" />
+        <section>
+          <label for="primary">Primary:</label>
+          <input type="text" id="primary" name="primary" />
+        </section>
 
-      <label for="perk1">Perk 1:</label>
-      <input type="text" id="perk1" name="perk1" />
+        <section>
+          <label for="secondary">Secondary:</label>
+          <input type="text" id="secondary" name="secondary" />
+        </section>
 
-      <label for="perk2">Perk 2:</label>
-      <input type="text" id="perk2" name="perk2" />
+        <section>
+          <label for="perk1">Perk 1:</label>
+          <input type="text" id="perk1" name="perk1" />
+        </section>
 
-      <label for="perk3">Perk 3:</label>
-      <input type="text" id="perk3" name="perk3" />
+        <section>
+          <label for="perk2">Perk 2:</label>
+          <input type="text" id="perk2" name="perk2" />
+        </section>
 
-      <label for="operator">Operator:</label>
-      <input type="text" id="operator" name="operator" />
+        <section>
+          <label for="perk3">Perk 3:</label>
+          <input type="text" id="perk3" name="perk3" />
+        </section>
 
-      <input type="submit" value="submit" />
-    </form>
+        <section>
+          <label for="operator">Operator:</label>
+          <input type="text" id="operator" name="operator" />
+        </section>
+        <input type="submit" value="submit" />
+      </form>
+    </main>
   </body>
 </html>
