@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <header>
-    <h1>Find-a-Teammate</h1>
-    <nav>
-      <ul>
-        <li><a href="/">Find Teammates</a></li>
-        <li class="active"><a href="/profile">Profile</a></li>
-      </ul>
-    </nav>
-  </header>
-
+  <%- include ('../partials/head.ejs') %>
   <body>
-    <%- include ('../partials/navbar.ejs') %>
-    <main>
+    <header>
+      <h1>Find-a-Teammate</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Find Teammates</a></li>
+          <li class="active"><a href="/profile">Profile</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="editprofile">
       <section class="loadout">
         <form action="/editprofile" method="POST">
-        <div class="primary">
+
+          <div>
+          <label for="primary">Primary</label>
           <input
             type="text"
             placeholder="Primary"
@@ -24,7 +26,9 @@
             value="<%= user.primary %>"
           />
         </div>
-        <div class="secondary">
+
+        <div>
+          <label for="secondary">Secondary</label>
           <input
             type="text"
             placeholder="Secondary"
@@ -33,7 +37,9 @@
             value="<%= user.secondary %>"
           />
         </div>
-        <div class="operator">
+
+        <div>
+          <label for="operator">Operator</label>
           <input
             type="text"
             placeholder="Operator"
@@ -42,7 +48,9 @@
             value="<%= user.operator %>"
           />
         </div>
-        <div class="perk1">
+
+        <div>
+          <label for="perk1">Perk 1</label>
           <input
             type="text"
             placeholder="Perk 1"
@@ -51,6 +59,9 @@
             value="<%= user.perk1 %>"
           />
         </div>
+
+        <div>
+        <label for="perk2">Perk 2</label>
         <input
             type="text"
             placeholder="Perk 2"
@@ -59,7 +70,9 @@
             value="<%= user.perk2 %>"
           />
         </div>
-        <div class="perk3">
+
+        <div>
+          <label for="perk3">Perk 3</label>
           <input
             type="text"
             placeholder="Perk 3"
@@ -68,9 +81,13 @@
             value="<%= user.perk3 %>"
           />
         </div>
+
       </section>
 
       <section class="profiles">
+
+        <div>
+        <label for="username">Username</label>
         <input
             type="text"
             placeholder="Username"
@@ -78,6 +95,10 @@
             required
             value="<%= user.username %>"
           />
+        </div>
+
+        <div>
+          <label for="platform">Platform</label>
           <input
           type="text"
           placeholder="Platform"
@@ -85,6 +106,10 @@
           required
           value="<%= user.platform %>"
         />
+        </div>
+
+        <div>
+        <label for="age">Age</label>
         <input
             type="text"
             placeholder="Age"
@@ -92,6 +117,7 @@
             required
             value="<%= user.age %>"
           />
+        </div>
           <button type="submit">Update Changes</button>
         </form>
       </section>
