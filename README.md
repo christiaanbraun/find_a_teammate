@@ -19,6 +19,7 @@ Start by cloning this repo locally, open the terminal and run:
 `git clone https://github.com/christiaanbraun/find_a_teammate.git`
 
 After that you can use the terminal to navigate to the folder you just created. (You can also just use the GUI of your OS of course)
+
 `cd find_a_teammate`
 
 ## Installing needed packages
