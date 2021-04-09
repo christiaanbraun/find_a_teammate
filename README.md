@@ -15,6 +15,7 @@ To work on this project you'll need [npm and nodejs.](https://www.npmjs.com/get-
 ## How to clone this repo
 
 Start by cloning this repo locally, open the terminal and run:
+
 `git clone https://github.com/christiaanbraun/find_a_teammate.git`
 
 After that you can use the terminal to navigate to the folder you just created. (You can also just use the GUI of your OS of course)
