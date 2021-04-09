@@ -2,9 +2,7 @@
 
 <img src='./public/images/UI_screenshot.png' alt="The User interface for the app" height="500" align="right">
 
-=======
 Hello and welcome to my repo, in this repo you'll find my progress for the matching feature I'm creating for a school project. The feature will be part of a bigger application which is going to be made in a few weeks. My feature will focus on Call of Duty players and help them find new teammates they like. It will allow people to update their profile and add more profiles. I want to add a login function later on but for now I'm focussing on getting the first part done. On the right you can see what the UI looks like.
->>>>>>> 130d6bcbf1da1d3430d82ff2c6c197215658fb29
 
 ## My Job Story
 
